@@ -1,6 +1,6 @@
 let teamSize = 0;
 const lang = localStorage.getItem('lang') || 'en';
-const defaultGame = localStorage.getItem('defaultGame') || 'wellcome';
+const defaultGame = localStorage.getItem('defaultGame') || '0000000001';
 const gmsList = document.getElementById("games");
 const gmsContainers = document.getElementById("gamesContainers");
 const headerTitle = document.getElementById("pageTitle");

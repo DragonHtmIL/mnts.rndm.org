@@ -26,7 +26,7 @@ const dimensions = [
   "512"
 ];
 function loadIcons() {
-  const direction = localStorage.getItem("icDir") || icReDir;
+  const direction = localStorage.getItem("icDir") || icReDir || "index_data/textures/icons/";
   const baseName = "icon_";
   const format = ".webp"
   for (let i = 0; i < dimensions.length; i++) {
