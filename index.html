@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="canonical" href="https://dragonhtmil.github.io/mnts.rndm.org/">
+    <link rel="manifest" href="" id="manifestTestLoad">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomerator</title>
+    <link rel="stylesheet" href="index_data/styles/roots.css">
+    <link rel="stylesheet" href="index_data/fonts/arial.css">
+    <link rel="stylesheet" href="index_data/styles/styles.css">
+    <link rel="stylesheet" href="index_data/styles/modal.css">
+    <link rel="stylesheet" href="index_data/styles/games.css">
+    <link rel="stylesheet" href="index_data/styles/settings.css">
+    <link id="icon16">
+    <link id="icon32">
+    <link id="icon48">
+    <link id="icon76">
+    <link id="icon96">
+    <link id="icon120">
+    <link id="icon128">
+    <link id="icon144">
+    <link id="icon152">
+    <link id="icon167">
+    <link id="icon180">
+    <link id="icon192">
+    <link id="icon196">
+    <link id="icon228">
+    <link id="icon256">
+    <link id="icon300">
+    <link id="icon384">
+    <link id="icon512">
+  </head>
+  <body>
+    <header>
+      <h1 id="pageTitle">Randomerator</h1>
+      <h1 class="header-btn" onclick="openModal('menuSettings')">&#x2699;</h1>
+    </header>
+    <div class="games-list" id="games"></div>
+    <div class="games-containers" id="gamesContainers"></div>
+    <!-- Modals -->
+    <div class="modal" id="menuSettings" style="right: -100%;">
+     <div class="modal-container">
+       <div class="modal-bar">
+         <h3 class="modal-name" id="modalMSname">...</h3>
+         <h3 class="modal-closer" onclick="closeModal('menuSettings');">✕</h3>
+       </div>
+       <div class="modal-content" id="settings">
+        <button id="applySettings">...</button>
+       </div>
+     </div>
+    </div>
+    <div id="moreScripts"></div>
+    <script src="index_data/scripts/registrations.js"></script>
+    <script src="index_data/scripts/default_locals.js"></script>
+    <script src="index_data/scripts/default_icon.js"></script>
+    <script src="index_data/scripts/load_games.js"></script>
+    <script src="index_data/scripts/load_settings.js"></script>
+    <script src="index_data/scripts/main_page_texts.js"></script>
+    <script src="index_data/scripts/modals.js"></script>
+    <script src="index_data/scripts/window_dom_loaded.js"></script>
+    <script src="index_data/scripts/window_load.js"></script>
+    <script src="sw_loader.js"></script>
+  </body>
+</html>

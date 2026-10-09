@@ -1,0 +1,206 @@
+.games-list {
+  width: 100%;
+  height: 20px;
+  background-color: var(--bars);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+  margin-top: -2px;
+}
+.games-list button {
+  height: 100%;
+  width: auto;
+  min-width: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin: 0 1px;
+  border: solid 2px var(--border);
+  background-color: var(--button-bg);
+  color: var(--text);
+  padding: 2px;
+}
+.games-list button.actived {
+  background-color: var(--button-bg-act);
+  border: solid 2px var(--border-act);
+  cursor: default;
+}
+.games-list button:first-child {
+  margin-left: 0;
+}
+.games-list button:last-child {
+  margin-right: 0;
+}
+.games-containers {
+  width: 100%;
+  height: calc(100% - 70px);
+  flex-shrink: 1;
+}
+.game-container {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  display: none;
+  padding: 20px;
+}
+.game-title {
+  text-align: center;
+}
+.char-card-s,
+.char-card-l {
+  background-color: var(--card-bg);
+  border: solid 2px var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  opacity: 1;
+  filter: blur(0px);
+}
+.char-card-s {
+  width: 100%;
+  margin: 10px 0;
+}
+.char-card-l {
+  width: calc(100% / 3 - 20px);
+  margin: 10px;
+  float: left;
+}
+.char-icon {
+  width: 100px;
+  height: 100px;
+  float: left;
+  background-color: var(--card-bg);
+  border-right: solid 1px var(--border);
+  flex-shrink: 1;
+}
+.char-name {
+  width: 100%;
+  height: 100px;
+  float: right;
+  background-color: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+  border-left: solid 1px var(--border);
+  position: relative;
+}
+.char-card-l:disabled,
+.char-card-l:disabled {
+  opacity: 0.5;
+  filter: blur(5px);
+}
+.reselect-button {
+  width: auto;
+  padding: 15px 20px;
+  background-color: var(--card-bg);
+  border: solid 2px var(--border);
+  color: var(--text);
+  border-radius: 10px;
+  position: absolute;
+  top: 4px;
+  left: 20px;
+  cursor: pointer;
+}
+.list-ch-s {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: solid 1px var(--border);
+  column-gap: 2px;
+  row-gap: 2px;
+}
+.list-ch-l {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: solid 1px var(--border);
+  column-gap: 2px;
+  row-gap: 2px;
+}
+.checkbox-container {
+  border: solid 2px var(--border);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+}
+.checkbox-container label {
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  text-align: center;
+}
+.checkbox-container *,
+.checkbox-container *::before,
+.checkbox-container *::after {
+  box-sizing: border-box;
+  transition: 0.6s;
+  -o-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -webkit-transition: 0.6s;
+}
+.checkbox-container input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  position: absolute;
+  overflow: hidden;
+  perspective: 240px;
+  width: 100%;
+  height: 100%;
+}
+.checkbox-container input[type="checkbox"]::before,
+.checkbox-container input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: var(--ch);
+}
+.checkbox-container input[type="checkbox"]:checked::before,
+.checkbox-container input[type="checkbox"]:checked::after {
+  background: var(--ch-act);
+}
+.cc-cont-out {
+  width: 100%;
+}
+input[type="search"] {
+  width: 100%;
+  font-size: 25px;
+  color: var(--vs-color-0);
+  background-color: var(--input);
+  text-align: center;
+  border: solid 2px var(--border);
+  border-bottom: none;
+}
+input[type="search"]:focus {
+  color: var(--text);
+  background-color: var(--input-act);
+}
+.hint-text-card {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: solid 2px var(--border);
+  text-align: center;
+  padding: 5px;
+  height: auto;
+}

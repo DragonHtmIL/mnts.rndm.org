@@ -1,0 +1,19 @@
+:root {
+  --vs-color-0: #008ad3ff;
+  --vs-color-0-a: #008ad388;
+  --bg: #121314ff;
+  --text: #ffffffff;
+  --border: #2a2b2cff;
+  --border-act: #8e8f90ff;
+  --header: #191a1bff;
+  --modal-back-bg: #12131499;
+  --modal-bg: #191a1bff;
+  --button-bg: #191a1bff;
+  --button-bg-act: #7d7e7fff;
+  --bars: #2a2b2cff;
+  --card-bg: #191a1bff;
+  --ch: #2a2b2cff;
+  --ch-act: var(--vs-color-0);
+  --select: #121314ff;
+  --button: var(--vs-color-0-a);
+}
