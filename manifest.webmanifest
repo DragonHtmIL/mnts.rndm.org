@@ -10,115 +10,115 @@
   "background_color": "#ffffff",
   "icons": [
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_0.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_0.webp",
       "type": "image/png",
       "sizes": "225x225",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_16.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_16.webp",
       "type": "image/png",
       "sizes": "16x16",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_32.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_32.webp",
       "type": "image/png",
       "sizes": "32x32",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_48.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_48.webp",
       "type": "image/png",
       "sizes": "48x48",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_76.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_76.webp",
       "type": "image/png",
       "sizes": "76x76",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_96.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_96.webp",
       "type": "image/png",
       "sizes": "96x96",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_120.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_120.webp",
       "type": "image/png",
       "sizes": "120x120",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_128.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_128.webp",
       "type": "image/png",
       "sizes": "128x128",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_144.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_144.webp",
       "type": "image/png",
       "sizes": "144x144",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_152.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_152.webp",
       "type": "image/png",
       "sizes": "152x152",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_167.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_167.webp",
       "type": "image/png",
       "sizes": "167x167",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_180.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_180.webp",
       "type": "image/png",
       "sizes": "180x180",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_192.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_192.webp",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_196.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_196.webp",
       "type": "image/png",
       "sizes": "196x196",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_228.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_228.webp",
       "type": "image/png",
       "sizes": "228x228",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_256.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_256.webp",
       "type": "image/png",
       "sizes": "256x256",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_300.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_300.webp",
       "type": "image/png",
       "sizes": "300x300",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_384.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_384.webp",
       "type": "image/png",
       "sizes": "384x384",
       "purpose": "any maskable"
     },
     {
-      "src": "/mnts.rndm.org/index_data/textures/system/icon_512.png",
+      "src": "/mnts.rndm.org/index_data/textures/system/icon_512.webp",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
