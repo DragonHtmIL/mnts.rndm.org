@@ -20,7 +20,7 @@ const texts_he_0000000001 = [
   "הנבחר הוא: ",
   "בחר מחדש",
   "חיפוש דמויות",
-  "מרובה משתתפים",
+  "רב משתתפים",
   "בחרו דמויות לבחירה אקראית..."
 ];
 const list_en_0000000001 = [
@@ -55,7 +55,6 @@ const list_en_0000000001 = [
   "Neuvillette",
   "Qiqi",
   "Skirk",
-  "Traveler%20(Cryo)",
   "Varesa",
   "Varka",
   "Wriothesley",
@@ -97,7 +96,6 @@ const list_en_0000000001 = [
   "Navia",
   "Prune",
   "Sigewinne",
-  "Traveler%20(Dendro)",
   "Xiangling",
   "Xianyun",
   "Xiao",
@@ -140,14 +138,148 @@ const list_en_0000000001 = [
   "Sethos",
   "Thoma",
   "Tighnari",
+  "Traveler%20(Cryo)",
+  "Traveler%20(Dendro)",
   "Traveler%20(Anemo)",
   "Traveler%20(Electro)",
   "Traveler%20(Geo)",
   "Traveler%20(Hydro)",
+  "Traveler%20(Pyro)",
   "Xinyan",
   "Yanfei",
   "Yaoyao",
-  "Yun%20Jin"
+  "Yun%20Jin",
+  "Vesna",
+  "Vodyanitsa"
+];
+const list_ru_0000000001 = [
+  "Алёша",
+  "Ситлали",
+  "Коломбина",
+  "Дурин",
+  "Эскофье",
+  "Флинс",
+  "Фурина",
+  "Инеффа",
+  "Лаума",
+  "Линнея",
+  "Мавуика",
+  "Нефер",
+  "Николь",
+  "Одетта",
+  "Сандроне",
+  "Сахароза",
+  "Шилонен",
+  "Яэ Мико",
+  "Цзы Бай",
+  "Арлекино",
+  "Беннет",
+  "Часка",
+  "Диона",
+  "Фишль",
+  "Иллуги",
+  "Кадзуха",
+  "Куки Синобу",
+  "Лоэн",
+  "Нёвиллет",
+  "Ци Ци",
+  "Скирк",
+  "Вареса",
+  "Варка",
+  "Ризли",
+  "Е Лань",
+  "Айно",
+  "Шеврёз",
+  "Тиори",
+  "Клоринда",
+  "Кинич",
+  "Иансан",
+  "Фарузан",
+  "Сайно",
+  "Мона",
+  "Нахида",
+  "Нилу",
+  "Оророн",
+  "Странник",
+  "Венти",
+  "Шэнь Хэ",
+  "Райдэн",
+  "Юмэмидзуки Мидзуки",
+  "Чжун Ли",
+  "Альбедо",
+  "Аль-Хайтам",
+  "Аяка",
+  "Аято",
+  "Бай Чжу",
+  "Бэй Доу",
+  "Шарлотта",
+  "Чайльд",
+  "Эмилия",
+  "Гань Юй",
+  "Ху Тао",
+  "Кли",
+  "Кокоми",
+  "Лань Янь",
+  "Лини",
+  "Муалани",
+  "Навия",
+  "Прюн",
+  "Сиджвин",
+  "Сян Лин",
+  "Сянь Юнь",
+  "Сяо",
+  "Син Цю",
+  "Ёимия",
+  "Элой",
+  "Эмбер",
+  "Барбара",
+  "Кандакия",
+  "Чун Юнь",
+  "Коллеи",
+  "Далия",
+  "Дэхья",
+  "Дилюк",
+  "Дори",
+  "Эола",
+  "Фремине",
+  "Ка Мин",
+  "Горо",
+  "Хэйдзо",
+  "Ифа",
+  "Итто",
+  "Ягода",
+  "Джинн",
+  "Качина",
+  "Кэйа",
+  "Кавех",
+  "Кэ Цин",
+  "Кирара",
+  "Лайла",
+  "Лиза",
+  "Линетт",
+  "Мика",
+  "Нин Гуан",
+  "Ноэлль",
+  "Рэйзор",
+  "Розария",
+  "Сара",
+  "Саю",
+  "Сетос",
+  "Тома",
+  "Тигнари",
+  "Путешественник‍ /‍ Путешественница‍ (Крио)",
+  "Путешественник‍ /‍ Путешественница‍ (Дендро)",
+  "Путешественник‍ /‍ Путешественница‍ (Анемо)",
+  "Путешественник‍ /‍ Путешественница‍ (Электро)",
+  "Путешественник‍ /‍ Путешественница‍ (Гео)",
+  "Путешественник‍ /‍ Путешественница‍ (Гидро)",
+  "Путешественник‍ /‍ Путешественница‍ (Пиро)",
+  "Синь Янь",
+  "Янь Фэй",
+  "Яо Яо",
+  "Юнь Цзинь",
+  "Весна",
+  "Водяница"
 ];
 
 const g0000000001NameTab = document.getElementById("gameTab0000000001");
@@ -174,18 +306,20 @@ function createCards0000000001() {
   const name3 = document.createElement("div");
   const icon3 = document.createElement("img");
   const reSelect = document.createElement("button");
+  reSelect.className = "reselect-button";
   if(modalDirection === "right") {
     card0.className = "char-card-s";
     card1.className = "char-card-s";
     card2.className = "char-card-s";
     card3.className = "char-card-s";
+    reSelect.classList.add("def");
   }else{
     card0.className = "char-card-l";
     card1.className = "char-card-l";
     card2.className = "char-card-l";
     card3.className = "char-card-l";
+    reSelect.classList.add("abs");
   }
-  reSelect.className = "reselect-button";
   if(lang === "en") {
     reSelect.innerHTML = texts_en_0000000001[1];
   }else
@@ -215,6 +349,17 @@ function createCards0000000001() {
   card3.id = "char0000000001card3";
   name3.id = "char0000000001name3";
   icon3.id = "char0000000001icon3";
+  icon0.src = "index_data/textures/non_selected.webp";
+  icon1.src = "index_data/textures/non_selected.webp";
+  icon2.src = "index_data/textures/non_selected.webp";
+  icon3.src = "index_data/textures/non_selected.webp";
+  if(lang === "he") {
+    name0.style.direction = "rtl";
+    name1.style.direction = "rtl";
+    name2.style.direction = "rtl";
+    name3.style.direction = "rtl";
+  }
+  g0000000001Container.appendChild(reSelect);
   g0000000001Container.appendChild(card0);
   card0.appendChild(icon0);
   card0.appendChild(name0);
@@ -227,7 +372,6 @@ function createCards0000000001() {
   g0000000001Container.appendChild(card3);
   card3.appendChild(icon3);
   card3.appendChild(name3);
-  g0000000001Container.appendChild(reSelect);
 
   card0.addEventListener('click', () => {
     randomize0000000001c0();
@@ -245,6 +389,7 @@ function createCards0000000001() {
     randomize0000000001c0();
     randomize0000000001c1();
     randomize0000000001c2();
+    randomize0000000001c3();
   });
 };
 createCards0000000001();
@@ -311,14 +456,22 @@ function avaibles0000000001() {
     const chList = document.createElement("div");
     const checkbox = document.createElement("input");
     const label = document.createElement("label");
+    const cIcon = document.createElement("div");
     chList.className = "checkbox-container cc-0000000001";
     checkbox.type = "checkbox";
     checkbox.id = "chChar0000000001un" + [u];
     label.className = "checkbox-label cl-0000000001";
-    label.textContent = decodeURIComponent(list_en_0000000001[u]);
+    if(lang === "ru") {
+      label.textContent = list_ru_0000000001[u];
+    }else{
+      label.textContent = list_en_0000000001[u];
+    }
     label.setAttribute("for", "chChar0000000001un" + [u]);
+    cIcon.className = "icon";
+    cIcon.style.backgroundImage = "url('https://sunderarmor.com/GENSHIN/Characters/1/" + list_en_0000000001[u] + ".png')";
     avaiblesList.appendChild(chList);
     chList.appendChild(checkbox);
+    chList.appendChild(cIcon);
     chList.appendChild(label);
     checkbox.addEventListener("change", () => {
       if (checkbox.checked) {
@@ -383,6 +536,7 @@ function randomize0000000001c0() {
   }else{
     arrayUsed = list_en_0000000001[Math.floor(Math.random() * list_en_0000000001.length)];
   };
+  const selectedName = lang === "ru" ? list_ru_0000000001[list_en_0000000001.indexOf(arrayUsed)] : arrayUsed;
   if (arrayUsed === undefined) {
     showNoAvailableCharacters0000000001(0);
     return;
@@ -401,13 +555,13 @@ function randomize0000000001c0() {
   document.getElementById("char0000000001icon0").src = "index_data/textures/animationed/1bcb7ef5e4bde48e.gif";
   setTimeout(function() {
     if(lang === "en") {
-      document.getElementById("char0000000001name0").innerHTML = texts_en_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name0").innerHTML = texts_en_0000000001[0] + selectedName;
     }else
     if(lang === "ru") {
-      document.getElementById("char0000000001name0").innerHTML = texts_ru_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name0").innerHTML = texts_ru_0000000001[0] + selectedName;
     }else
     if(lang === "he") {
-      document.getElementById("char0000000001name0").innerHTML = texts_he_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name0").innerHTML = texts_he_0000000001[0] + selectedName;
     }
     document.getElementById("char0000000001card0").disabled = false;
     document.getElementById("char0000000001icon0").src = "https://sunderarmor.com/GENSHIN/Characters/1/" + charSelected + ".png";
@@ -425,6 +579,7 @@ function randomize0000000001c1() {
   }else{
     arrayUsed = list_en_0000000001[Math.floor(Math.random() * list_en_0000000001.length)];
   };
+  const selectedName = lang === "ru" ? list_ru_0000000001[list_en_0000000001.indexOf(arrayUsed)] : arrayUsed;
   if (arrayUsed === undefined) {
     showNoAvailableCharacters0000000001(1);
     return;
@@ -443,13 +598,13 @@ function randomize0000000001c1() {
   document.getElementById("char0000000001icon1").src = "index_data/textures/animationed/1bcb7ef5e4bde48e.gif";
   setTimeout(function() {
     if(lang === "en") {
-      document.getElementById("char0000000001name1").innerHTML = texts_en_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name1").innerHTML = texts_en_0000000001[0] + selectedName;
     }else
     if(lang === "ru") {
-      document.getElementById("char0000000001name1").innerHTML = texts_ru_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name1").innerHTML = texts_ru_0000000001[0] + selectedName;
     }else
     if(lang === "he") {
-      document.getElementById("char0000000001name1").innerHTML = texts_he_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name1").innerHTML = texts_he_0000000001[0] + selectedName;
     }
     document.getElementById("char0000000001card1").disabled = false;
     document.getElementById("char0000000001icon1").src = "https://sunderarmor.com/GENSHIN/Characters/1/" + charSelected + ".png";
@@ -467,6 +622,7 @@ function randomize0000000001c2() {
   }else{
     arrayUsed = list_en_0000000001[Math.floor(Math.random() * list_en_0000000001.length)];
   };
+  const selectedName = lang === "ru" ? list_ru_0000000001[list_en_0000000001.indexOf(arrayUsed)] : arrayUsed;
   if (arrayUsed === undefined) {
     showNoAvailableCharacters0000000001(2);
     return;
@@ -485,13 +641,13 @@ function randomize0000000001c2() {
   document.getElementById("char0000000001icon2").src = "index_data/textures/animationed/1bcb7ef5e4bde48e.gif";
   setTimeout(function() {
     if(lang === "en") {
-      document.getElementById("char0000000001name2").innerHTML = texts_en_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name2").innerHTML = texts_en_0000000001[0] + selectedName;
     }else
     if(lang === "ru") {
-      document.getElementById("char0000000001name2").innerHTML = texts_ru_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name2").innerHTML = texts_ru_0000000001[0] + selectedName;
     }else
     if(lang === "he") {
-      document.getElementById("char0000000001name2").innerHTML = texts_he_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name2").innerHTML = texts_he_0000000001[0] + selectedName;
     }
     document.getElementById("char0000000001card2").disabled = false;
     document.getElementById("char0000000001icon2").src = "https://sunderarmor.com/GENSHIN/Characters/1/" + charSelected + ".png";
@@ -509,6 +665,7 @@ function randomize0000000001c3() {
   }else{
     arrayUsed = list_en_0000000001[Math.floor(Math.random() * list_en_0000000001.length)];
   };
+  const selectedName = lang === "ru" ? list_ru_0000000001[list_en_0000000001.indexOf(arrayUsed)] : arrayUsed;
   if (arrayUsed === undefined) {
     showNoAvailableCharacters0000000001(3);
     return;
@@ -527,13 +684,13 @@ function randomize0000000001c3() {
   document.getElementById("char0000000001icon3").src = "index_data/textures/animationed/1bcb7ef5e4bde48e.gif";
   setTimeout(function() {
     if(lang === "en") {
-      document.getElementById("char0000000001name3").innerHTML = texts_en_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name3").innerHTML = texts_en_0000000001[0] + selectedName;
     }else
     if(lang === "ru") {
-      document.getElementById("char0000000001name3").innerHTML = texts_ru_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name3").innerHTML = texts_ru_0000000001[0] + selectedName;
     }else
     if(lang === "he") {
-      document.getElementById("char0000000001name3").innerHTML = texts_he_0000000001[0] + displayedCharacter;
+      document.getElementById("char0000000001name3").innerHTML = texts_he_0000000001[0] + selectedName;
     }
     document.getElementById("char0000000001card3").disabled = false;
     document.getElementById("char0000000001icon3").src = "https://sunderarmor.com/GENSHIN/Characters/1/" + charSelected + ".png";
