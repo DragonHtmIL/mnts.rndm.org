@@ -61,7 +61,7 @@ const list_en_0000000000 = [
   "Roxy Ifrita Pryce",
   "Seed",
   "Seth Lowell",
-  "Sigrid de L'Azur",
+  "Sigrid de LAzur",
   "Soldier 0 - Anby",
   "Soldier 11",
   "Soukaku",
@@ -78,6 +78,68 @@ const list_en_0000000000 = [
   "Yixuan",
   "Zhao",
   "Zhu Yuan"
+];
+const list_ru_0000000000 = [
+  "Рина",
+  "Элис",
+  "Энби",
+  "Антон",
+  "Ария",
+  "Харумаса",
+  "Астра",
+  "Баньюэ",
+  "Бен",
+  "Билли",
+  "Бёрнис",
+  "Цезарь",
+  "Циссия",
+  "Кларет Флинт",
+  "Корин",
+  "Диалинь",
+  "Эллен",
+  "Эвелин",
+  "Грейс",
+  "Мияби",
+  "Хуго",
+  "Джейн",
+  "Цзюй Фуфу",
+  "Коляда",
+  "Манато",
+  "Лайтер",
+  "Люсия",
+  "Люси",
+  "Наньгун Юй",
+  "Нэкомата",
+  "Николь",
+  "Норма Холоуэлл",
+  "Орфея",
+  "Пань Иньху",
+  "Пайпер",
+  "Промея",
+  "Пульхра",
+  "Пироис",
+  "Цинъи",
+  "Ремиэлла Дан",
+  "Рокси Ифрита Прайс",
+  "Сид",
+  "Сет",
+  "Сигрид де лАзур",
+  "Солдат 0",
+  "Солдат 11",
+  "Сокаку",
+  "Звёздный Билли",
+  "Санна",
+  "Гашетка",
+  "Янаги",
+  "Юдзуха",
+  "Велина Эйргид",
+  "Вивиан",
+  "Ликаон",
+  "Е Шуньгуан",
+  "Йидхари",
+  "Исюань",
+  "Чжао",
+  "Чжу Юань"
 ];
 
 const g0000000000NameTab = document.getElementById("gameTab0000000000");
@@ -101,16 +163,18 @@ function createCards0000000000() {
   const name2 = document.createElement("div");
   const icon2 = document.createElement("img");
   const reSelect = document.createElement("button");
+  reSelect.className = "reselect-button";
   if(modalDirection === "right") {
     card0.className = "char-card-s";
     card1.className = "char-card-s";
     card2.className = "char-card-s";
+    reSelect.classList.add("def");
   }else{
     card0.className = "char-card-l";
     card1.className = "char-card-l";
     card2.className = "char-card-l";
+    reSelect.classList.add("abs");
   }
-  reSelect.className = "reselect-button";
   if(lang === "en") {
     reSelect.innerHTML = texts_en_0000000000[1];
   }else
@@ -135,6 +199,15 @@ function createCards0000000000() {
   card2.id = "char0000000000card2";
   name2.id = "char0000000000name2";
   icon2.id = "char0000000000icon2";
+  icon0.src = "index_data/textures/non_selected.webp";
+  icon1.src = "index_data/textures/non_selected.webp";
+  icon2.src = "index_data/textures/non_selected.webp";
+  if(lang === "he") {
+    name0.style.direction = "rtl";
+    name1.style.direction = "rtl";
+    name2.style.direction = "rtl";
+  }
+  g0000000000Container.appendChild(reSelect);
   g0000000000Container.appendChild(card0);
   card0.appendChild(icon0);
   card0.appendChild(name0);
@@ -144,7 +217,6 @@ function createCards0000000000() {
   g0000000000Container.appendChild(card2);
   card2.appendChild(icon2);
   card2.appendChild(name2);
-  g0000000000Container.appendChild(reSelect);
 
   card0.addEventListener('click', () => {
     randomize0000000000c0();
@@ -190,14 +262,22 @@ function avaibles0000000000() {
     const chList = document.createElement("div");
     const checkbox = document.createElement("input");
     const label = document.createElement("label");
+    const cIcon = document.createElement("div");
     chList.className = "checkbox-container cc-0000000000";
     checkbox.type = "checkbox";
     checkbox.id = "chChar0000000000un" + [u];
     label.className = "checkbox-label cl-0000000000";
-    label.textContent = list_en_0000000000[u];
+    if(lang === "ru") {
+      label.textContent = list_ru_0000000000[u];
+    }else{
+      label.textContent = list_en_0000000000[u];
+    }
     label.setAttribute("for", "chChar0000000000un" + [u]);
+    cIcon.className = "icon";
+    cIcon.style.backgroundImage = "url('index_data/games/game_0000000000/agents/" + list_en_0000000000[u] + ".webp')";
     avaiblesList.appendChild(chList);
     chList.appendChild(checkbox);
+    chList.appendChild(cIcon);
     chList.appendChild(label);
     checkbox.addEventListener("change", () => {
       if (checkbox.checked) {
@@ -246,6 +326,7 @@ function randomize0000000000c0() {
   if (avaiblesList0000000000.length === 0) return;
   document.getElementById("char0000000000card0").disabled = true;
   const charSelected0 = avaiblesList0000000000[Math.floor(Math.random() * avaiblesList0000000000.length)];
+  const selectedName = lang === "ru" ? list_ru_0000000000[list_en_0000000000.indexOf(charSelected0)] : charSelected0;
   if(lang === "en") {
     document.getElementById("char0000000000name0").innerHTML = texts_en_0000000000[0] + "...";
   }else
@@ -258,15 +339,15 @@ function randomize0000000000c0() {
   document.getElementById("char0000000000icon0").src = "index_data/textures/animationed/1bcb7ef5e4bde48e.gif";
   setTimeout(function() {
     if(lang === "en") {
-      document.getElementById("char0000000000name0").innerHTML = texts_en_0000000000[0] + charSelected0;
+      document.getElementById("char0000000000name0").innerHTML = texts_en_0000000000[0] + selectedName;
       document.getElementById("char0000000000name0").innerHTML += `<div class="hint-text-card">> ` + texts_en_0000000000[1] + ` <</div>`;
     }else
     if(lang === "ru") {
-      document.getElementById("char0000000000name0").innerHTML = texts_ru_0000000000[0] + charSelected0;
+      document.getElementById("char0000000000name0").innerHTML = texts_ru_0000000000[0] + selectedName;
       document.getElementById("char0000000000name0").innerHTML += `<div class="hint-text-card">> ` + texts_ru_0000000000[1] + ` <</div>`;
     }else
     if(lang === "he") {
-      document.getElementById("char0000000000name0").innerHTML = texts_he_0000000000[0] + charSelected0;
+      document.getElementById("char0000000000name0").innerHTML = texts_he_0000000000[0] + selectedName;
       document.getElementById("char0000000000name0").innerHTML += `<div class="hint-text-card">> ` + texts_he_0000000000[1] + ` <</div>`;
     }
     document.getElementById("char0000000000card0").disabled = false;
@@ -279,6 +360,7 @@ function randomize0000000000c1() {
   if (avaiblesList0000000000.length === 0) return;
   document.getElementById("char0000000000card1").disabled = true;
   const charSelected1 = avaiblesList0000000000[Math.floor(Math.random() * avaiblesList0000000000.length)];
+  const selectedName = lang === "ru" ? list_ru_0000000000[list_en_0000000000.indexOf(charSelected1)] : charSelected1;
   if(lang === "en") {
     document.getElementById("char0000000000name1").innerHTML = texts_en_0000000000[0] + "...";
   }else
@@ -291,15 +373,15 @@ function randomize0000000000c1() {
   document.getElementById("char0000000000icon1").src = "index_data/textures/animationed/1bcb7ef5e4bde48e.gif";
   setTimeout(function() {
     if(lang === "en") {
-      document.getElementById("char0000000000name1").innerHTML = texts_en_0000000000[0] + charSelected1;
+      document.getElementById("char0000000000name1").innerHTML = texts_en_0000000000[0] + selectedName;
       document.getElementById("char0000000000name1").innerHTML += `<div class="hint-text-card">> ` + texts_en_0000000000[1] + ` <</div>`;
     }else
     if(lang === "ru") {
-      document.getElementById("char0000000000name1").innerHTML = texts_ru_0000000000[0] + charSelected1;
+      document.getElementById("char0000000000name1").innerHTML = texts_ru_0000000000[0] + selectedName;
       document.getElementById("char0000000000name1").innerHTML += `<div class="hint-text-card">> ` + texts_ru_0000000000[1] + ` <</div>`;
     }else
     if(lang === "he") {
-      document.getElementById("char0000000000name1").innerHTML = texts_he_0000000000[0] + charSelected1;
+      document.getElementById("char0000000000name1").innerHTML = texts_he_0000000000[0] + selectedName;
       document.getElementById("char0000000000name1").innerHTML += `<div class="hint-text-card">> ` + texts_he_0000000000[1] + ` <</div>`;
     }
     document.getElementById("char0000000000card1").disabled = false;
@@ -313,6 +395,7 @@ function randomize0000000000c2() {
   if (avaiblesList0000000000.length === 0) return;
   document.getElementById("char0000000000card2").disabled = true;
   const charSelected2 = avaiblesList0000000000[Math.floor(Math.random() * avaiblesList0000000000.length)];
+  const selectedName = lang === "ru" ? list_ru_0000000000[list_en_0000000000.indexOf(charSelected2)] : charSelected2;
   if(lang === "en") {
     document.getElementById("char0000000000name2").innerHTML = texts_en_0000000000[0] + "...";
   }else
@@ -325,15 +408,15 @@ function randomize0000000000c2() {
   document.getElementById("char0000000000icon2").src = "index_data/textures/animationed/1bcb7ef5e4bde48e.gif";
   setTimeout(function() {
     if(lang === "en") {
-      document.getElementById("char0000000000name2").innerHTML = texts_en_0000000000[0] + charSelected2;
+      document.getElementById("char0000000000name2").innerHTML = texts_en_0000000000[0] + selectedName;
       document.getElementById("char0000000000name2").innerHTML += `<div class="hint-text-card">> ` + texts_en_0000000000[1] + ` <</div>`;
     }else
     if(lang === "ru") {
-      document.getElementById("char0000000000name2").innerHTML = texts_ru_0000000000[0] + charSelected2;
+      document.getElementById("char0000000000name2").innerHTML = texts_ru_0000000000[0] + selectedName;
       document.getElementById("char0000000000name2").innerHTML += `<div class="hint-text-card">> ` + texts_ru_0000000000[1] + ` <</div>`;
     }else
     if(lang === "he") {
-      document.getElementById("char0000000000name2").innerHTML = texts_he_0000000000[0] + charSelected2;
+      document.getElementById("char0000000000name2").innerHTML = texts_he_0000000000[0] + selectedName;
       document.getElementById("char0000000000name2").innerHTML += `<div class="hint-text-card">> ` + texts_he_0000000000[1] + ` <</div>`;
     }
     document.getElementById("char0000000000card2").disabled = false;
