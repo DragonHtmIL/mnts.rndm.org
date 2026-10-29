@@ -98,18 +98,22 @@
   filter: blur(5px);
 }
 .reselect-button {
-  width: auto;
+  width: 100%;
   padding: 15px 20px;
   background-color: var(--card-bg);
   border: solid 2px var(--border);
   color: var(--text);
-  border-radius: 10px;
+  cursor: pointer;
+}
+.reselect-button.abs {
+  width: auto;
   position: absolute;
   top: 4px;
   left: 20px;
-  cursor: pointer;
+  border-radius: 10px;
 }
-.list-ch-s {
+.list-ch-s,
+.list-ch-l {
   width: 100%;
   height: auto;
   display: grid;
@@ -119,13 +123,7 @@
   row-gap: 2px;
 }
 .list-ch-l {
-  width: 100%;
-  height: auto;
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: solid 1px var(--border);
-  column-gap: 2px;
-  row-gap: 2px;
 }
 .checkbox-container {
   border: solid 2px var(--border);
@@ -133,8 +131,19 @@
   flex-direction: row;
   position: relative;
   overflow: hidden;
+  align-items: center;
+}
+.checkbox-container .icon {
+  width: 28px;
+  height: 28px;
+  background-position: left center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  flex-shrink: 0;
 }
 .checkbox-container label {
+  flex-shrink: 1;
   width: 100%;
   z-index: 1;
   height: 100%;
@@ -203,4 +212,56 @@ input[type="search"]:focus {
   text-align: center;
   padding: 5px;
   height: auto;
+}
+.click-effect.game0000000000 {
+  -webkit-animation: clckeffect0 0.6s;
+  animation: clckeffect0 0.6s;
+}
+@-webkit-keyframes clckeffect0 {
+  0% {background-image: url('../games/game_0000000000/click_effects/0.png');}
+  11% {background-image: url('../games/game_0000000000/click_effects/1.png');}
+  22% {background-image: url('../games/game_0000000000/click_effects/2.png');}
+  33% {background-image: url('../games/game_0000000000/click_effects/3.png');}
+  44% {background-image: url('../games/game_0000000000/click_effects/4.png');}
+  55% {background-image: url('../games/game_0000000000/click_effects/5.png');}
+  66% {background-image: url('../games/game_0000000000/click_effects/6.png');}
+  77% {background-image: url('../games/game_0000000000/click_effects/7.png');}
+  100% {background-image: url('../games/game_0000000000/click_effects/8.png');}
+}
+@keyframes clckeffect0 {
+  0% {background-image: url('../games/game_0000000000/click_effects/0.png');}
+  11% {background-image: url('../games/game_0000000000/click_effects/1.png');}
+  22% {background-image: url('../games/game_0000000000/click_effects/2.png');}
+  33% {background-image: url('../games/game_0000000000/click_effects/3.png');}
+  44% {background-image: url('../games/game_0000000000/click_effects/4.png');}
+  55% {background-image: url('../games/game_0000000000/click_effects/5.png');}
+  66% {background-image: url('../games/game_0000000000/click_effects/6.png');}
+  77% {background-image: url('../games/game_0000000000/click_effects/7.png');}
+  100% {background-image: url('../games/game_0000000000/click_effects/8.png');}
+}
+.click-effect.game0000000001 {
+  -webkit-animation: clckeffect1 0.6s;
+  animation: clckeffect1 0.6s;
+}
+@-webkit-keyframes clckeffect1 {
+  0% {background-image: url('../games/game_0000000001/click_effects/0.png');}
+  11% {background-image: url('../games/game_0000000001/click_effects/1.png');}
+  22% {background-image: url('../games/game_0000000001/click_effects/2.png');}
+  33% {background-image: url('../games/game_0000000001/click_effects/3.png');}
+  44% {background-image: url('../games/game_0000000001/click_effects/4.png');}
+  55% {background-image: url('../games/game_0000000001/click_effects/5.png');}
+  66% {background-image: url('../games/game_0000000001/click_effects/6.png');}
+  77% {background-image: url('../games/game_0000000001/click_effects/7.png');}
+  100% {background-image: url('../games/game_0000000001/click_effects/8.png');}
+}
+@keyframes clckeffect1 {
+  0% {background-image: url('../games/game_0000000001/click_effects/0.png');}
+  11% {background-image: url('../games/game_0000000001/click_effects/1.png');}
+  22% {background-image: url('../games/game_0000000001/click_effects/2.png');}
+  33% {background-image: url('../games/game_0000000001/click_effects/3.png');}
+  44% {background-image: url('../games/game_0000000001/click_effects/4.png');}
+  55% {background-image: url('../games/game_0000000001/click_effects/5.png');}
+  66% {background-image: url('../games/game_0000000001/click_effects/6.png');}
+  77% {background-image: url('../games/game_0000000001/click_effects/7.png');}
+  100% {background-image: url('../games/game_0000000001/click_effects/8.png');}
 }
