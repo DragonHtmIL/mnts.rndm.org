@@ -1,7 +1,7 @@
 // each lines with "//", unavaible for now.
 var GHPATH = '/mnts.rndm.org';
 var APP_PREFIX = 'gppwa_';
-var VERSION = "1.0.2-29102026";
+var VERSION = "1.0.3-02112026";
 var URLS = [
   `${GHPATH}/index_data/fonts/arial.css`,
   `${GHPATH}/index_data/fonts/arial.ttf`,
