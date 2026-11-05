@@ -8,6 +8,6 @@ if (lang === null || lang === undefined || lang === '') {
   }
 };
 if (defaultGame === null || defaultGame === undefined || defaultGame === '') {
-  document.getElementById("gameTab0000000001").classList.add("actived");
-  document.getElementById("gameContainer0000000001").style.display = "block";
+  document.getElementById("gameTab0000000002").classList.add("actived");
+  document.getElementById("gameContainer0000000002").style.display = "block";
 }
